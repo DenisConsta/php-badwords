@@ -13,7 +13,15 @@
 </head>
 <body>
   <h1>Results :</h1>
-  <h3>paragraph: <?php echo $paragraph ?></h3>
-  <h3>censored: <?php echo $censored ?></h3>
+  <h3>
+    <?php echo $paragraph . " (" . strlen($paragraph) . ")"; ?>
+  </h3>
+  <h3>
+    <?php 
+    $newP = str_replace($censored, '***', $paragraph);
+    echo $newP . " (" . strlen($newP) . ")";
+    ?>
+  </h3>
+    
 </body>
 </html>
